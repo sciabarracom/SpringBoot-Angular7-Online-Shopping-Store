@@ -1,0 +1,18 @@
+spec:
+  name: SpringBootAngularShop
+  services:
+   - name: backend
+     git:
+      branch: master
+      repo_clone_url: https://github.com/sciabarrado/SpringBoot-Angular7-Online-Shopping-Store
+     dockerfile_path: backend/Dockerfile
+   - name: frontend
+     git:
+      branch: master
+      repo_clone_url: https://github.com/sciabarrado/SpringBoot-Angular7-Online-Shopping-Store
+     dockerfile_path: frontend/Dockerfile
+  databases:
+   - name: database
+
+
+

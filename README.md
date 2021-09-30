@@ -1,5 +1,8 @@
 # Online Shop Application
 
+[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/{REPO-OWNER}/{REPO-NAME}/tree/{BRANCH-NAME})
+
+
 #### A full-stack Online Shop web application using Spring Boot 2 and Angular 7. 
 This is a Single Page Appliaction with client-side rendering. It includes [backend](https://github.com/zhulinn/SpringBoot-Angular7-ShoppingCart/tree/backend) and [frontend](https://github.com/zhulinn/SpringBoot-Angular7-ShoppingCart/tree/frontend) two seperate projects on different branches.
 The frontend client makes API calls to the backend server when it is running.
