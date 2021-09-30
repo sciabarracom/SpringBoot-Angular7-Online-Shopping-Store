@@ -1,6 +1,6 @@
 # Online Shop Application
 
-[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/{REPO-OWNER}/{REPO-NAME}/tree/{BRANCH-NAME})
+[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/sciabarrado/SpringBoot-Angular7-Online-Shopping-Store/tree/master)
 
 
 #### A full-stack Online Shop web application using Spring Boot 2 and Angular 7. 
