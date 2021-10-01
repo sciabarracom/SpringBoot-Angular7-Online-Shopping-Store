@@ -1,8 +1,0 @@
-name: SpringAngularShop
-services:
-- dockerfile_path: frontend/Dockerfile
-  git:
-    branch: main
-    repo_clone_url: https://github.com/sciabarrado/SpringBoot-Angular7-Online-Shopping-Store.git
-    dockerfile_path:  
-  name: frontend
