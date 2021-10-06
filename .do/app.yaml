@@ -1,8 +1,40 @@
 name: SpringAngularShop
+databases:
+- name: db
+  engine: PG
+  version: "12"
 services:
-- dockerfile_path: frontend/Dockerfile
-  git:
+- name: backend
+  source_dir: backend
+  dockerfile_path: backend/Dockerfile
+  github:
     branch: main
-    repo_clone_url: https://github.com/sciabarrado/SpringBoot-Angular7-Online-Shopping-Store.git
-    dockerfile_path:  
-  name: frontend
+    deploy_on_push: true
+    repo: sciabarrado/SpringBoot-Angular7-Online-Shopping-Store.git
+    envs:
+     - key: JDBC_DATABASE_URL
+       scope: RUN_TIME
+       value: ${db.JDBC_DATABASE_URL}
+     - key: USERNAME
+       scope: RUN_TIME
+       value: ${db.USERNAME}
+     - key: PASSWORD
+       scope: RUN_TIME
+       value: ${db.PASSWORD}
+  http_port: 8080
+  routes:
+  - path: /backend/
+- name: frontend
+  source_dir: frontend
+  dockerfile_path: frontend/Dockerfile
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: sciabarrado/SpringBoot-Angular7-Online-Shopping-Store.git
+  envs:
+     - key: BACKEND_URL
+       scope: RUN_TIME
+       value: ${backend.PRIVATE_URL}
+  http_port: 80
+  routes:
+  - path: /
