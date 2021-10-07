@@ -1,8 +1,4 @@
-name: SpringAngularShop
-databases:
-- name: db
-  engine: PG
-  version: "12"
+name: spring-angular-shop
 services:
 - name: backend
   source_dir: backend
@@ -10,17 +6,17 @@ services:
   github:
     branch: main
     deploy_on_push: true
-    repo: sciabarrado/SpringBoot-Angular7-Online-Shopping-Store.git
-    envs:
-     - key: JDBC_DATABASE_URL
-       scope: RUN_TIME
-       value: ${db.JDBC_DATABASE_URL}
-     - key: USERNAME
-       scope: RUN_TIME
-       value: ${db.USERNAME}
-     - key: PASSWORD
-       scope: RUN_TIME
-       value: ${db.PASSWORD}
+    repo: demerziel/SpringBoot-Angular7-Online-Shopping-Store.git
+  envs:
+    - key: JDBC_DATABASE_URL
+      scope: RUN_TIME
+      value: ${db.JDBC_DATABASE_URL}
+    - key: USERNAME
+      scope: RUN_TIME
+      value: ${db.USERNAME}
+    - key: PASSWORD
+      scope: RUN_TIME
+      value: ${db.PASSWORD}
   http_port: 8080
   routes:
   - path: /backend/
@@ -30,7 +26,7 @@ services:
   github:
     branch: main
     deploy_on_push: true
-    repo: sciabarrado/SpringBoot-Angular7-Online-Shopping-Store.git
+    repo: demerziel/SpringBoot-Angular7-Online-Shopping-Store.git
   envs:
      - key: BACKEND_URL
        scope: RUN_TIME
@@ -38,3 +34,7 @@ services:
   http_port: 80
   routes:
   - path: /
+databases:
+- name: db
+  engine: PG
+  version: "12"
