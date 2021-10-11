@@ -17,15 +17,6 @@ services:
     - key: PASSWORD
       scope: RUN_TIME
       value: ${db.PASSWORD}
-    - key: JDBC_DATABASE_URL
-      scope: BUILD_TIME
-      value: ${db.JDBC_DATABASE_URL}
-    - key: USERNAME
-      scope: BUILD_TIME
-      value: ${db.USERNAME}
-    - key: PASSWORD
-      scope: BUILD_TIME
-      value: ${db.PASSWORD}
   http_port: 8080
   routes:
   - path: /backend/
