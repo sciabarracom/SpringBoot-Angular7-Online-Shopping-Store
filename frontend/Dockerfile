@@ -1,7 +1,7 @@
 FROM node:10 as builder
 COPY *.json /usr/src/
 COPY src /usr/src/src
-RUN cd /usr/src && npm install && npm run build --prod
+RUN cd /usr/src && npm install && ./node_modules/.bin/ng build --prod
 FROM nginx:1.13.3-alpine
 COPY /nginx/default.conf /etc/default.conf
 RUN rm -rf /usr/share/nginx/html/*
