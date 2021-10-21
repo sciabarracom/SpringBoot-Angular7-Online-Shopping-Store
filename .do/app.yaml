@@ -6,7 +6,7 @@ services:
   github:
     branch: main
     deploy_on_push: true
-    repo: sciabarracom/SpringBoot-Angular7-Online-Shopping-Store
+    repo: sciabarrado/SpringBoot-Angular7-Online-Shopping-Store
   envs:
     - key: JDBC_DATABASE_URL
       scope: RUN_TIME
@@ -26,7 +26,7 @@ services:
   github:
     branch: main
     deploy_on_push: true
-    repo: sciabarracom/SpringBoot-Angular7-Online-Shopping-Store
+    repo: sciabarrado/SpringBoot-Angular7-Online-Shopping-Store
   envs:
      - key: BACKEND_URL
        scope: RUN_TIME
